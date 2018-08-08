@@ -237,6 +237,7 @@ a:hover{text-decoration:none !important;}
 .min_photo{
     width: .8rem;
     height: .8rem;
+    border-radius: 50%;
 }
 .review_name{
     font-size: .3467rem;
@@ -283,7 +284,7 @@ a:hover{text-decoration:none !important;}
 }
 /* 举报按钮 */
 .report{
-    font-size: .4267rem;
+    font-size: .5267rem;
 }
 .reportnum{
     margin: 0 .1067rem;
