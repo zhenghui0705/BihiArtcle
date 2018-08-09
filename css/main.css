@@ -457,7 +457,7 @@ a:hover{text-decoration:none !important;}
     border-radius: .4rem;
     width: 2.4rem;
     height: .8rem;
-    border: .0267rem solid #cccccc;
+    border: 1px solid #cccccc;
     text-align: center;
     line-height: .8rem;
     font-size: .3733rem;
