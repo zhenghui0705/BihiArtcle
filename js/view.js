@@ -100,6 +100,15 @@ var exportModle = (function () {
             $('.ReplyboxContent').hide();
             $('.commentBox').show();
         });
+        //iOS下Html页面中input获取焦点弹出键盘时挡
+        let u = navigator.userAgent, app = navigator.appVersion;
+        let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isiOS) {
+            window.setTimeout(function(){
+                window.scrollTo(0,document.body.clientHeight);
+            }, 500);
+            console.log(isiOS, '3213121')
+        }
 
     }
     // 执行函数
