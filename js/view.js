@@ -2,6 +2,8 @@ var exportModle = (function () {
     // 定义变量
     var lis = $(".listBar2")
     var res = $(".reportResTitle")
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
     // 函数写在这个里面
     var mainFunction = function () {
         $('input').on('click', function () {
@@ -100,15 +102,17 @@ var exportModle = (function () {
             $('.ReplyboxContent').hide();
             $('.commentBox').show();
         });
-        //iOS下Html页面中input获取焦点弹出键盘时挡
-        let u = navigator.userAgent, app = navigator.appVersion;
-        let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        
         if (isiOS) {
-            window.setTimeout(function(){
-                window.scrollTo(0,document.body.clientHeight);
-            }, 500);
-            console.log(isiOS, '3213121')
+            $('textarea').focus(function () {
+                window.setTimeout('scrollBottom()', 500);
+            });
         }
+
+        function scrollBottom() {
+            window.scrollTo(0, $('body').height());
+        }
+
 
     }
     // 执行函数
