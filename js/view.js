@@ -4,6 +4,13 @@ var exportModle = (function () {
     var res = $(".reportResTitle")
     // 函数写在这个里面
     var mainFunction = function () {
+        $('input').on('click', function () {
+            var target = this;
+            // 使用定时器是为了让输入框上滑时更加自然
+            setTimeout(function () {
+                target.scrollIntoView(true);
+            }, 100);
+        });
         // 评论框事件
         function monitor() {
             var winH = window.innerHeight || document.documentElement.clientHeight; //获取浏览器窗口高度
@@ -89,7 +96,7 @@ var exportModle = (function () {
             $(".ReplyboxContent").show().find('input').focus();
         });
 
-        $('.child_section').on('touchend', function () {
+        $('.section').on('touchend', function () {
             $('.ReplyboxContent').hide();
             $('.commentBox').show();
         });

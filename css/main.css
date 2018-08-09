@@ -58,7 +58,7 @@ a:hover{text-decoration:none !important;}
 .focus {
     position: absolute;
     right: 0;
-    border: .0267rem solid #fead00;
+    border: 1px solid #fead00;
     padding: 0 .3733rem;
     height: .5867rem;
     border-radius: .1067rem;
